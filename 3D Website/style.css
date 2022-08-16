@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  height: 100vh;
+  background-image: url("images/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.logo {
+  display: grid;
+  grid-area: 1/1/2/4;
+  margin-left: 2vw;
+}
+.logo a {
+  font-family: "Roboto Mono", monospace;
+  font-style: italic;
+  font-size: 2rem;
+  text-decoration: none;
+  margin-top: 2vh;
+  color: white;
+}
+.main-nav {
+  display: grid;
+  grid-area: 1/4/2/12;
+  justify-content: center;
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  margin-top: 1vh;
+}
+.main-nav li {
+  display: inline-flex;
+}
+.main-nav li a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  margin-top: 2vh;
+  padding: 0 3em;
+}
+.sec-nav {
+  grid-area: 1/12/2/17;
+  display: inline-flex;
+  margin-top: 2.7vh;
+  padding: 0 3em;
+}
+.sec-nav a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin-left: 1vw;
+  font-family: "Courier Prime", monospace;
+  margin-top: 0.7vh;
+}
+
+#form {
+  background-color: rgba(245, 245, 245, 0.3);
+  width: 200px;
+  height: 28px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#form input {
+  all: unset;
+  font: 16px system-ui;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+#form ::placeholder {
+  color: #fff;
+  opacity: 0.7;
+  font-family: "Courier Prime", monospace;
+}
+
+#form button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+svg {
+  color: #fff;
+  fill: currentColor;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+}
+
+.cta {
+  display: grid;
+  grid-area: 2/1/16/17;
+  font-family: "Roboto Mono", monospace;
+  align-self: center;
+  margin-left: 2vw;
+  color: whitesmoke;
+}
+
+.cta-text h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.cta p {
+  font-size: 1.5rem;
+}
+
+.cta button {
+  background-color: rgba(120, 156, 165, 0.6);
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 24px;
+  padding: 0.5em 2em;
+  text-align: center;
+  width: fit-content;
+}
+
+button:hover {
+  color: #2d2d2d;
+}
+
+footer {
+  font-family: "Courier Prime", monospace;
+  display: grid;
+  grid-area: 16/1/17/17;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+}
+footer a {
+  color: white;
+}
+
+/***********************************************/
+
+.contact-background {
+  background: rgb(37, 26, 26);
+  background: linear-gradient(
+    111deg,
+    rgba(37, 26, 26, 1) 16%,
+    rgba(187, 150, 142, 1) 91%,
+    rgba(98, 130, 141, 1) 100%
+  );
+}
+
+.contact-background h2 {
+  color: white;
+  margin-left: 2vw;
+  font-family: "Roboto Mono", monospace;
+  font-weight: lighter;
+  padding-top: 3vh;
+}
+
+#contact {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  width: clamp(90px, 90%, 900px);
+  margin: 30px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-links,
+.contact-form-wrapper {
+  width: 50%;
+  padding: 8% 5% 10% 5%;
+}
+
+.contact-links {
+  background-color: #100e0b;
+  border-radius: 10px 0 0 10px;
+}
+
+.contact-form-wrapper {
+  background-color: #ffffff8f;
+  border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-links,
+  .contact-form-wrapper {
+    width: 100%;
+  }
+
+  .contact-links {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .contact-form-wrapper {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
+}
+
+.contact-links h2 {
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  transform: scale(0.95, 1);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.link {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.link img {
+  width: 45px;
+  height: 45px;
+  filter: hue-rotate(220deg) drop-shadow(2px 4px 4px #0006);
+  transition: 0.2s;
+  user-select: none;
+}
+
+img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+img:active {
+  transform: scale(1.1, 1.1);
+  filter: hue-rotate(220deg) drop-shadow(2px 4px 4px #222) sepia(0.3);
+}
+
+.form-item {
+  position: relative;
+}
+
+.form-item label,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+.form-item label {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  color: #999;
+  font-size: clamp(14px, 1.5vw, 18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.form-item input,
+textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+
+.form-item input:focus + label,
+input:valid + label,
+textarea:focus + label,
+textarea:valid + label {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: #777;
+  top: -20px;
+  transition: all 0.225s ease;
+}
+
+.contact-form-wrapper .submit-btn {
+  background-color: rgba(120, 156, 165);
+  filter: drop-shadow(2px 2px 3px #0003);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px);
+  display: block;
+  padding: 12px 20px;
+  margin: 2px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.contact-form-wrapper .submit-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.submit-btn:active {
+  transform: scale(1.1, 1.1);
+  filter: sepia(0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: clamp(40px, 10vw, 60px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: clamp(30px, 12vw, 60px);
+  }
+
+  .links {
+    padding-top: 30px;
+  }
+
+  img {
+    width: 38px;
+    height: 38px;
+  }
+}
+/**********************************/
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  height: 100vh;
+
+  background: rgb(37, 26, 26);
+  background: linear-gradient(
+    111deg,
+    rgba(37, 26, 26, 1) 16%,
+    rgba(187, 150, 142, 1) 91%,
+    rgba(98, 130, 141, 1) 100%
+  );
+}
+
+.showcase {
+  display: grid;
+  grid-area: 2/1/16/17;
+  font-family: "Roboto Mono", monospace;
+  align-content: center;
+  justify-content: center;
+}
+.showcase h2 {
+  display: grid;
+  grid-area: 2/1/3/17;
+  text-align: left;
+  align-items: center;
+  align-self: center;
+  color: white;
+  font-weight: lighter;
+}
+.cards {
+  margin-top: 5vh;
+  display: grid;
+  grid-area: 3/1/16/17;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, minmax(260px, 1fr));
+  grid-gap: 2em;
+}
+
+.card img {
+  align-content: center;
+  border-radius: 14px;
+}
+.card a {
+  color: rgba(120, 156, 165, 0.6);
+  font-size: 1.3rem;
+  font-weight: lighter;
+}
+footer p {
+  color: white;
+}
